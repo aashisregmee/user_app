@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "853642453785",
+    "project_id": "futsal-made-simple-821c3",
+    "storage_bucket": "futsal-made-simple-821c3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:853642453785:android:e46cc961828280ab025b88",
+        "android_client_info": {
+          "package_name": "com.futsalmadesimple.user_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "853642453785-6didnh8upm129k2lnoqlha9nn6puh9vh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.futsalmadesimple.user_app",
+            "certificate_hash": "33da43f683e22c74f6725d8f0e34214a61ea9558"
+          }
+        },
+        {
+          "client_id": "853642453785-5q3605aivg4k7m19c9mc88bpeck5gdki.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmOiPVn1VtmeUGuoi_iqCFNVtJ3V5FC2s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "853642453785-5q3605aivg4k7m19c9mc88bpeck5gdki.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
