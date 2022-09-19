@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:http/http.dart';
 import 'package:user_app/app/routes/app_pages.dart';
 
 class MyDrawer extends StatelessWidget {
@@ -18,43 +19,45 @@ class MyDrawer extends StatelessWidget {
           DrawerHeader(
             padding: EdgeInsets.all(0),
             decoration: BoxDecoration(),
-            child: Image.asset(
-              "assets/images/futsal.jpg",
-              fit: BoxFit.cover,
-            ),
+            child: Column( mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(Icons.account_circle, size: 50, color: Colors.grey,),
+                SizedBox(height: 15,),
+                Text("Aashish Regmi")
+              ],
+            )
           ),
-          ListTile(
-            leading: Icon(Icons.message),
-            title: Text('Messages'),onTap: (){
-              Get.toNamed(Routes.MESSAGES);
-            },
-          ),
+          
           ListTile(
             leading: Icon(Icons.account_circle),
-            title: Text('Profile'),
+            title: Text('Edit Profile'),
            onTap: (){
-              Get.toNamed(Routes.PROFILE);
+              Get.toNamed(Routes.EDIT_PROFILE);
             },
           ),
           ListTile(
-            leading: Icon(Icons.history),
-            title: Text('Game History'),onTap: (){
-              Get.toNamed(Routes.HISTORY);
+            leading: Icon(Icons.password),
+            title: Text('Change Password'),onTap: (){
+              Get.toNamed(Routes.CHANGE_PASSWORD);
             },
             
           ),
           ListTile(
-            leading: Icon(Icons.emoji_events),
-            title: Text('Tournaments'),onTap: (){
-              Get.toNamed(Routes.TOURNAMENTS);
+            leading: Icon(Icons.map),
+            title: Text('View Location'),onTap: (){
+            
             },
           ),
+          
           ListTile(
             leading: Icon(Icons.logout),
-            title: Text('Logout'),
+            title: Text('Logout'), onTap: (){
+              Get.offNamed(Routes.LOGIN);
+            },
           ),
         ],
       ),
     );
   }
 }
+// keytool -list -v -alias androiddebugkey -keystore %USERPROFILE%\.android\debug.keystore

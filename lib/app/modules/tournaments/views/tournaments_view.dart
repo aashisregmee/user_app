@@ -10,15 +10,19 @@ class TournamentsView extends GetView<TournamentsController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('TournamentsView'),
+        title: const Text('Tournaments'),
         centerTitle: true,
       ),
-      body: Center(
-        child: Text(
-          'TournamentsView is working',
-          style: TextStyle(fontSize: 20),
-        ),
-      ),
+      body: ListView.builder(itemBuilder: ((context, index) {
+        return Card(
+          margin: EdgeInsets.all(5),
+          child: ListTile(leading: Icon(Icons.event),
+title: Text('Ram Bahadur Tournament'),
+subtitle: Text('Entry Fee: Rs.5000'),
+trailing: ElevatedButton(onPressed: (){},child: Text('Join'),),
+
+          ),);
+      }))
     );
   }
 }

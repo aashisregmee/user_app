@@ -8,17 +8,32 @@ class HistoryView extends GetView<HistoryController> {
   const HistoryView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('HistoryView'),
-        centerTitle: true,
-      ),
-      body: Center(
-        child: Text(
-          'HistoryView is working',
-          style: TextStyle(fontSize: 20),
+    return  DefaultTabController(
+        length: 2,
+        child: Scaffold(
+          appBar: AppBar(
+            bottom:  TabBar(
+              tabs: [
+                Tab(text: "Upcoming",),
+                Tab(text: "History",),
+                
+              ],
+            ),
+            title: const Text('My Bookings'),
+          ),
+          body:TabBarView(
+            children: [
+              ListView.builder(itemCount: 5, itemBuilder: (context,index){
+                return Card(child: ListTile(leading: Icon(Icons.gamepad),title: Text("15 sept 10 am"), trailing: Text("Rs.1000"),));
+              }),
+              ListView.builder(itemCount: 5, itemBuilder: (context,index){
+                return Card(child: ListTile(leading: Icon(Icons.gamepad),title: Text("15 sept 10 am"), trailing: Text("Rs.1000"),));
+              }),
+          
+           
+            ],
+          ),
         ),
-      ),
-    );
+      );
   }
 }

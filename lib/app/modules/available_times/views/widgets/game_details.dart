@@ -73,20 +73,19 @@ class GameDetails extends StatelessWidget {
               ),
             ),
             Expanded(
-              child: Card(
-                child: Container(
-                  margin: EdgeInsets.all(7),
-                  height: 50,
-                  width: 55,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: Colors.blue.withOpacity(0.7)),
-                  child: Center(
+              child: Container(
+                margin: EdgeInsets.all(7),
+                height: 50,
+                width: 55,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.blue.withOpacity(0.7)),
+                child: Center(
+                    child: FittedBox(
                       child: Text(
-                    "Book now",
-                    style: TextStyle(fontSize: 20),
-                  )),
-                ),
+                        "Book Now",           
+                      ),
+                    )),
               ),
             ),
           ],
