@@ -29,9 +29,11 @@ class LoginView extends GetView<LoginController> {
                   const SizedBox(height: 10,),
                   PasswordField("Password", controller: controller.passwordController),
                   const SizedBox(height: 20,),
-                 PrimaryButton(text: "Login", onPress:(){
-                  Get.offNamed(Routes.HOME);
-                 } ),
+                 Obx(
+                    () => controller.isLoading.isTrue? CircularProgressIndicator(): PrimaryButton(text: "Login", onPress:(){
+                                 controller.login();
+                   } ),
+                 ),
                  const SizedBox(height: 5,),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,

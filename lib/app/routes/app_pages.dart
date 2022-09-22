@@ -8,20 +8,28 @@ import '../modules/contact/bindings/contact_binding.dart';
 import '../modules/contact/views/contact_view.dart';
 import '../modules/edit_profile/bindings/edit_profile_binding.dart';
 import '../modules/edit_profile/views/edit_profile_view.dart';
+import '../modules/feedback/bindings/feedback_binding.dart';
+import '../modules/feedback/views/feedback_view.dart';
 import '../modules/history/bindings/history_binding.dart';
 import '../modules/history/views/history_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/login/bindings/login_binding.dart';
 import '../modules/login/views/login_view.dart';
+import '../modules/loyalty/bindings/loyalty_binding.dart';
+import '../modules/loyalty/views/loyalty_view.dart';
 import '../modules/messages/bindings/messages_binding.dart';
 import '../modules/messages/views/messages_view.dart';
 import '../modules/monthly_subscription/bindings/monthly_subscription_binding.dart';
 import '../modules/monthly_subscription/views/monthly_subscription_view.dart';
 import '../modules/splash_screen/bindings/splash_screen_binding.dart';
 import '../modules/splash_screen/views/splash_screen_view.dart';
+import '../modules/tournament_details/bindings/tournament_details_binding.dart';
+import '../modules/tournament_details/views/tournament_details_view.dart';
 import '../modules/tournaments/bindings/tournaments_binding.dart';
 import '../modules/tournaments/views/tournaments_view.dart';
+import '../modules/view_location/bindings/view_location_binding.dart';
+import '../modules/view_location/views/view_location_view.dart';
 
 part 'app_routes.dart';
 
@@ -51,7 +59,6 @@ class AppPages {
       page: () => const MessagesView(),
       binding: MessagesBinding(),
     ),
-
     GetPage(
       name: _Paths.HISTORY,
       page: () => const HistoryView(),
@@ -59,7 +66,7 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.TOURNAMENTS,
-      page: () => const TournamentsView(),
+      page: () =>  TournamentsView(),
       binding: TournamentsBinding(),
     ),
     GetPage(
@@ -86,6 +93,26 @@ class AppPages {
       name: _Paths.CHANGE_PASSWORD,
       page: () => const ChangePasswordView(),
       binding: ChangePasswordBinding(),
+    ),
+    GetPage(
+      name: _Paths.FEEDBACK,
+      page: () => const FeedbackView(),
+      binding: FeedbackBinding(),
+    ),
+    GetPage(
+      name: _Paths.LOYALTY,
+      page: () => const LoyaltyView(),
+      binding: LoyaltyBinding(),
+    ),
+    GetPage(
+      name: _Paths.VIEW_LOCATION,
+      page: () => const ViewLocationView(),
+      binding: ViewLocationBinding(),
+    ),
+    GetPage(
+      name: _Paths.TOURNAMENT_DETAILS,
+      page: () =>  TournamentDetailsView(),
+      binding: TournamentDetailsBinding(),
     ),
   ];
 }

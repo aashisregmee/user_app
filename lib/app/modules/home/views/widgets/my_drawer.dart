@@ -5,6 +5,8 @@ import 'package:get/get.dart';
 import 'package:http/http.dart';
 import 'package:user_app/app/routes/app_pages.dart';
 
+import '../../controllers/home_controller.dart';
+
 class MyDrawer extends StatelessWidget {
   const MyDrawer({
     Key? key,
@@ -23,7 +25,7 @@ class MyDrawer extends StatelessWidget {
               children: [
                 Icon(Icons.account_circle, size: 50, color: Colors.grey,),
                 SizedBox(height: 15,),
-                Text("Aashish Regmi")
+                Text("User Name")
               ],
             )
           ),
@@ -40,19 +42,25 @@ class MyDrawer extends StatelessWidget {
             title: Text('Change Password'),onTap: (){
               Get.toNamed(Routes.CHANGE_PASSWORD);
             },
-            
           ),
           ListTile(
+            leading: Icon(Icons.contact_phone),
+            title: Text('Contact'),onTap: (){
+              Get.toNamed(Routes.CONTACT);
+            },
+            ),
+
+               /* ListTile(
             leading: Icon(Icons.map),
             title: Text('View Location'),onTap: (){
             
             },
-          ),
+          ),*/
           
           ListTile(
             leading: Icon(Icons.logout),
             title: Text('Logout'), onTap: (){
-              Get.offNamed(Routes.LOGIN);
+              Get.find<HomeController>().logout();
             },
           ),
         ],

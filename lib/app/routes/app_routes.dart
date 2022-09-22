@@ -14,6 +14,10 @@ abstract class Routes {
   static const MONTHLY_SUBSCRIPTION = _Paths.MONTHLY_SUBSCRIPTION;
   static const EDIT_PROFILE = _Paths.EDIT_PROFILE;
   static const CHANGE_PASSWORD = _Paths.CHANGE_PASSWORD;
+  static const FEEDBACK = _Paths.FEEDBACK;
+  static const LOYALTY = _Paths.LOYALTY;
+  static const VIEW_LOCATION = _Paths.VIEW_LOCATION;
+  static const TOURNAMENT_DETAILS = _Paths.TOURNAMENT_DETAILS;
 }
 
 abstract class _Paths {
@@ -29,4 +33,8 @@ abstract class _Paths {
   static const MONTHLY_SUBSCRIPTION = '/monthly-subscription';
   static const EDIT_PROFILE = '/edit-profile';
   static const CHANGE_PASSWORD = '/change-password';
+  static const FEEDBACK = '/feedback';
+  static const LOYALTY = '/loyalty';
+  static const VIEW_LOCATION = '/view-location';
+  static const TOURNAMENT_DETAILS = '/tournament-details';
 }
